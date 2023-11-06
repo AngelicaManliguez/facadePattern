@@ -2,20 +2,20 @@ package FacadePattern;
 
 public class Cart implements HotelService{
 
-    private int cartNumber;
+    private int numberOfCarts;
 
-    public Cart(int cartNumber)
+    public Cart(int numberOfCarts)
     {
-        this.cartNumber = cartNumber;
+        this.numberOfCarts = numberOfCarts;
     }
 
-    public void numberOfCarts(int cartNumber)
+    public void requestCart(int numberOfCarts)
     {
         System.out.println("\nCart Service");
-        System.out.println("Number of your cart is " + cartNumber + ". We are happy to assist you with your luggage.");
+        System.out.println("Number of your cart is " + numberOfCarts + ". We are happy to assist you with your luggage.");
     }
     @Override
     public void requestServices() {
-        numberOfCarts(cartNumber);
+        requestCart(numberOfCarts);
     }
 }
